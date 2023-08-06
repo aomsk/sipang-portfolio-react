@@ -42,7 +42,7 @@ function Profile() {
                   const htmlText = skill.icon;
                   return (
                     <div
-                      className="flex items-center rounded-lg transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
+                      className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
                       key={index}
                     >
                       <div
@@ -62,7 +62,7 @@ function Profile() {
                   const htmlText = skill.icon;
                   return (
                     <div
-                      className="flex items-center rounded-lg transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
+                      className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
                       key={index}
                     >
                       <div
@@ -82,7 +82,7 @@ function Profile() {
                   const htmlText = skill.icon;
                   return (
                     <div
-                      className="flex items-center rounded-lg transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
+                      className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
                       key={index}
                     >
                       <div
