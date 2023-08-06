@@ -1,4 +1,5 @@
 import "../src/styles/App.css";
+import { useState } from "react";
 
 // components
 import Navbar from "./components/Navbar";
@@ -10,12 +11,15 @@ import Footer from "./components/Footer";
 
 function App() {
   const menu: string[] = ["Profile", "Projects", "Contact"];
+  const tags: string[] = ["All", "Full-Stack", "Back-end", "Front-end"];
+  const [selectBadge, setSelectBadge] = useState<string>("All");
+
   return (
     <>
       <Navbar menu={menu} />
       <Hero />
       <Profile />
-      <Projects />
+      <Projects tags={tags} selectBadge={selectBadge} setSelectBadge={setSelectBadge} />
       <Contact />
       <Footer />
     </>
