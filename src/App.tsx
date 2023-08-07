@@ -10,13 +10,12 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
-  const menu: string[] = ["Profile", "Projects", "Contact"];
   const tags: string[] = ["All", "Full-Stack", "Back-end", "Front-end"];
   const [selectBadge, setSelectBadge] = useState<string>("All");
 
   return (
     <>
-      <Navbar menu={menu} />
+      <Navbar />
       <Hero />
       <Profile />
       <Projects tags={tags} selectBadge={selectBadge} setSelectBadge={setSelectBadge} />
