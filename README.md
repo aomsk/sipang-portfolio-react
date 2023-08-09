@@ -5,3 +5,4 @@
 - React (Vite)
 - Tailwind CSS
 - DaisyUI
+- Canvas-Confetti
