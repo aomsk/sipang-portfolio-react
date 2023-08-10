@@ -1,70 +1,41 @@
-import { useState } from "react";
-import { BsFillCloudSunFill, BsFillCloudMoonFill } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineClose } from "react-icons/md";
+// data
+import { links } from "../utils/data";
+import { motion } from "framer-motion";
+import { useActiveSectionTitle } from "../context/activeSectionNavbar";
 
 function Navbar() {
-  const links = [
-    {
-      title: "Profile",
-      link: "#profile",
-    },
-    {
-      title: "My Projects",
-      link: "#projects",
-    },
-    {
-      title: "Contact",
-      link: "#contact",
-    },
-  ];
-  const [open, setOpen] = useState<boolean>(false);
-  const [theme, setTheme] = useState<string>("light");
+  const { activeTitle, setActiveSectionTitle } = useActiveSectionTitle();
 
   return (
-    <nav className="w-full absolute top-0 left-0 z-[1]">
-      <div className="md:flex items-center justify-between bg-white py-3 md:px-10 px-7">
-        <div className="font-bold text-xl cursor-pointer flex items-center text-gray-800">
-          <span></span>
-          Sipang K.
-        </div>
-        <div
-          onClick={() => setOpen(!open)}
-          className="text-2xl absolute right-8 top-[.8rem] cursor-pointer md:hidden "
-        >
-          {open ? <MdOutlineClose /> : <GiHamburgerMenu />}
-        </div>
-        <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-out ${
-            open ? "top-10 opacity-100" : "top-[-490px] opacity-0"
-          } md:opacity-100`}
-        >
-          {links.map((itme, index) => (
-            <li key={index} className="md:ml-8 text-[.9rem] font-bold md:my-0 my-7">
-              <a
-                href={itme.link}
-                className="uppercase text-gray-800 hover:text-gray-400 hover:text-lg duration-500"
+    <nav className="flex justify-center relative top-5 z-[1]">
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="backdrop-blur-sm bg-white/80 p-3 rounded-full shadow-md fixed"
+      >
+        <ul className="flex justify-center items-center">
+          {links.map((link, index) => {
+            return (
+              <li
+                key={index}
+                className="px-2 md:px-4 xl:px-4"
+                onClick={() => setActiveSectionTitle(link.title)}
               >
-                {itme.title}
-              </a>
-            </li>
-          ))}
-
-          <li className="md:ml-8 text-[.9rem] font-bold md:my-0 my-7">
-            {theme === "light" ? (
-              <BsFillCloudSunFill
-                className="w-[20px] h-[20px] mt-[-10px] cursor-pointer"
-                onClick={() => setTheme("dark")}
-              />
-            ) : (
-              <BsFillCloudMoonFill
-                className="w-[20px] h-[20px] mt-[-10px] cursor-pointer"
-                onClick={() => setTheme("light")}
-              />
-            )}
-          </li>
+                <a
+                  href={link.link}
+                  className={`transition-all text-[0.9rem] hover:font-bold hover:text-[1rem] ${
+                    activeTitle === link.title
+                      ? "font-bold md:py-2 md:px-3 md:rounded-full md:bg-slate-200"
+                      : ""
+                  }`}
+                >
+                  {link.title}
+                </a>
+              </li>
+            );
+          })}
         </ul>
-      </div>
+      </motion.div>
     </nav>
   );
 }
