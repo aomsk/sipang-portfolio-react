@@ -6,7 +6,7 @@ interface ProjectsProps {
 function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
   return (
     <section id="projects" className="flex flex-col items-center h-full pt-[5rem]">
-      <h1 className="text-2xl font-bold mb-5">My Projects</h1>
+      <h1 className="text-2xl font-bold py-5">My Projects</h1>
       <div className="flex justify-center items-center w-full xl:w-[30rem]">
         {tags.map((tag, index) => (
           <span

@@ -19,7 +19,7 @@ function Profile() {
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <section id="profile" className="flex flex-col items-center h-auto pt-14">
+    <section id="profile" className="flex flex-col items-center h-auto pt-[5rem]">
       <h1 className="text-2xl font-bold py-5">Profile</h1>
       <motion.div
         ref={ref}
@@ -76,18 +76,6 @@ function Profile() {
                 );
               })}
             </div>
-            {/* <ul className="flex justify-center flex-wrap p-5">
-              {skills_lang.map((skill, index) => {
-                return (
-                  <li
-                    className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
-                    key={index}
-                  >
-                    <span className="pl-[.2rem] text-[.88rem]">{skill.name}</span>
-                  </li>
-                );
-              })}
-            </ul> */}
           </div>
           <div>
             <h1 className="text-center font-medium">Framework & Library</h1>
