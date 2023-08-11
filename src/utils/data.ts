@@ -1,18 +1,36 @@
 export const links = [
   {
     title: "Home",
-    link: "#",
+    link: "home",
   },
   {
     title: "Profile",
-    link: "#profile",
+    link: "profile",
   },
   {
     title: "My Projects",
-    link: "#projects",
+    link: "projects",
   },
   {
     title: "Contact",
-    link: "#contact",
+    link: "contact",
   },
 ];
+// export const links = [
+//   {
+//     title: "Home",
+//     link: "#",
+//   },
+//   {
+//     title: "Profile",
+//     link: "#profile",
+//   },
+//   {
+//     title: "My Projects",
+//     link: "#projects",
+//   },
+//   {
+//     title: "Contact",
+//     link: "#contact",
+//   },
+// ];
