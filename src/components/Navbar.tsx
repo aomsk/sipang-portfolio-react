@@ -1,13 +1,14 @@
 // data
 import { links } from "../utils/data";
 import { motion } from "framer-motion";
-import { useActiveSectionTitle } from "../context/activeSectionNavbar";
+// import { useActiveSectionTitle } from "../context/activeSectionNavbar";
+import { Link } from "react-scroll";
 
 function Navbar() {
-  const { activeTitle, setActiveSectionTitle } = useActiveSectionTitle();
+  // const { activeTitle, setActiveSectionTitle } = useActiveSectionTitle();
 
   return (
-    <nav className="flex justify-center relative top-5 z-[1]">
+    <nav className="flex justify-center relative top-3 z-[1]">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -16,21 +17,17 @@ function Navbar() {
         <ul className="flex justify-center items-center">
           {links.map((link, index) => {
             return (
-              <li
-                key={index}
-                className="px-2 md:px-4 xl:px-4"
-                onClick={() => setActiveSectionTitle(link.title)}
-              >
-                <a
-                  href={link.link}
-                  className={`transition-all text-[0.9rem] hover:font-bold hover:text-[1rem] ${
-                    activeTitle === link.title
-                      ? "font-bold md:py-2 md:px-3 md:rounded-full md:bg-slate-200"
-                      : ""
-                  }`}
+              <li key={index} className="px-2 md:px-4 xl:px-4">
+                <Link
+                  className="transition-all text-[0.9rem] hover:font-bold hover:text-[1rem] cursor-pointer"
+                  activeClass="font-bold md:py-2 md:px-3 md:rounded-full md:bg-slate-200"
+                  smooth={true}
+                  duration={150}
+                  spy={true}
+                  to={link.link}
                 >
                   {link.title}
-                </a>
+                </Link>
               </li>
             );
           })}

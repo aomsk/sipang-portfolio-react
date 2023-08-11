@@ -4,11 +4,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import { runFireWorks } from "../utils/conffeti";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useActiveSectionTitle } from "../context/activeSectionNavbar";
+import { Link } from "react-scroll";
 
 function Hero() {
-  const { setActiveSectionTitle } = useActiveSectionTitle();
-
   useEffect(() => {
     setTimeout(() => {
       runFireWorks();
@@ -16,7 +14,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center h-full">
+    <section id="home" className="flex flex-col items-center justify-center h-full">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -31,7 +29,7 @@ function Hero() {
         <img
           src="../static/images/avatar2.jpg"
           alt="avatar"
-          className="w-[200px] h-[200px] rounded-full"
+          className="w-[200px] h-[200px] rounded-full shadow-md"
         />
       </motion.div>
       <motion.div
@@ -61,9 +59,9 @@ function Hero() {
           </div>
         </div>
         <div className="mt-10">
-          <a href="#profile" onClick={() => setActiveSectionTitle("Profile")}>
+          <Link to={"profile"} smooth={true} spy={true} duration={150} className="cursor-pointer">
             <IoIosArrowDown className="w-[20px] h-[20px]" />
-          </a>
+          </Link>
         </div>
       </motion.div>
     </section>
