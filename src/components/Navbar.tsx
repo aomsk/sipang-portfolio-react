@@ -12,7 +12,7 @@ function Navbar() {
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="backdrop-blur-sm bg-white/80 p-3 rounded-full shadow-md fixed"
+        className="backdrop-blur-sm bg-white/80 p-3 rounded-full shadow-lg fixed"
       >
         <ul className="flex justify-center items-center">
           {links.map((link, index) => {

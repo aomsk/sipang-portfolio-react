@@ -29,7 +29,7 @@ function Hero() {
         <img
           src="../static/images/avatar2.jpg"
           alt="avatar"
-          className="w-[200px] h-[200px] rounded-full shadow-md"
+          className="w-[200px] h-[200px] rounded-full shadow-lg"
         />
       </motion.div>
       <motion.div
@@ -47,7 +47,7 @@ function Hero() {
             <a
               href=""
               download
-              className="bg-black text-white px-3 py-2 rounded-full gap-2 transition-all hover:text-[18px] cursor-pointer"
+              className="bg-black text-white px-3 py-2 rounded-full gap-2 transition-all hover:text-[18px] cursor-pointer shadow-lg"
             >
               Download Resume
             </a>
