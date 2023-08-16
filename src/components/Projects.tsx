@@ -35,7 +35,7 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
                 return <CardProject key={index} {...project} />;
               })}
       </div>
-      <div className="join">
+      <div className="join mt-5">
         <button className="join-item btn">1</button>
         <button className="join-item btn btn-active">2</button>
         <button className="join-item btn">3</button>
