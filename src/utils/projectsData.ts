@@ -7,6 +7,8 @@ export const projects: IProjects[] = [
     imageUrl: "howto.png",
     tag: "Mobile",
     technologies: ["React-Native", "JS", "Firebase"],
+    githubLink: "https://github.com/aomsk/Covid-Safe-ZoneApp",
+    previewLink: "",
   },
   {
     title: "Ha Ha How To",
@@ -14,6 +16,8 @@ export const projects: IProjects[] = [
     imageUrl: "howto.png",
     tag: "Full-Stack",
     technologies: ["React", "JS", "AWS", "Express"],
+    githubLink: "https://github.com/aomsk/Ha-Ha-How-To",
+    previewLink: "",
   },
   {
     title: "Kaew - Ta",
@@ -21,13 +25,17 @@ export const projects: IProjects[] = [
     imageUrl: "howto.png",
     tag: "Mobile",
     technologies: ["React-Native", "JS", "ML"],
+    githubLink: "https://github.com/aomsk/Object-Detection-App",
+    previewLink: "",
   },
   {
-    title: "Tip-Calculator",
+    title: "Tip Calculator",
     description: "Calculate the correct tip and total cost of the bill per person",
     imageUrl: "tip-calculator-app-creenshot.png",
     tag: "Front-end",
     technologies: ["React", "TS", "Tailwind"],
+    githubLink: "https://github.com/aomsk/tip-calculator-app",
+    previewLink: "https://tip-calculator-app-aomsk.vercel.app/",
   },
   {
     title: "Todo List",
@@ -35,5 +43,16 @@ export const projects: IProjects[] = [
     imageUrl: "todoList.png",
     tag: "Full-Stack",
     technologies: ["React", "TS", "Tailwind", "Express"],
+    githubLink: "https://github.com/aomsk/todolist-fullStack",
+    previewLink: "",
+  },
+  {
+    title: "Shopping Store",
+    description: "Shopping-Store",
+    imageUrl: "shopping-store.png",
+    tag: "Front-end",
+    technologies: ["React", "TS", "Tailwind", "Fetch API"],
+    githubLink: "https://github.com/aomsk/shopping-store",
+    previewLink: "https://shopping-store-aomsk.netlify.app/",
   },
 ];

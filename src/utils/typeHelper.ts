@@ -14,4 +14,6 @@ export interface IProjects {
   imageUrl: string;
   tag: string;
   technologies: string[];
+  githubLink: string;
+  previewLink: string;
 }
