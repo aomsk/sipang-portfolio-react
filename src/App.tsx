@@ -10,8 +10,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
-  const tags: string[] = ["All", "Full-Stack", "Back-end", "Front-end"];
-  // const tags: string[] = ["All", "Full-Stack", "Back-end", "Front-end", "Mobile"];
+  // const tags: string[] = ["All", "Full-Stack", "Back-end", "Front-end"];
+  const tags: string[] = ["All", "Full-Stack", "Back-end", "Front-end", "Mobile"];
   const [selectBadge, setSelectBadge] = useState<string>("All");
 
   return (
