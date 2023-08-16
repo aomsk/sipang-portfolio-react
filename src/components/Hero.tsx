@@ -53,9 +53,15 @@ function Hero() {
             </a>
           </div>
           <div className="flex justify-center mt-5">
-            <FaInstagram className="w-[20px] h-[20px] ml-2" />
-            <FaGithub className="w-[20px] h-[20px] ml-2" />
-            <FaFacebook className="w-[20px] h-[20px] ml-2" />
+            <a href="https://www.instagram.com/aomj_sk" target="_blank">
+              <FaInstagram className="w-[20px] h-[20px] ml-2" />
+            </a>
+            <a href="https://github.com/aomsk" target="_blank">
+              <FaGithub className="w-[20px] h-[20px] ml-2" />
+            </a>
+            <a href="https://www.facebook.com/AOMJSK/" target="_blank">
+              <FaFacebook className="w-[20px] h-[20px] ml-2" />
+            </a>
           </div>
         </div>
         <div className="mt-10">
