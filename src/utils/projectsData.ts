@@ -1,27 +1,58 @@
-interface Projects {
-  title: string;
-  description: string;
-  imageUrl: string;
-  tags: string[];
-}
+import { IProjects } from "./typeHelper";
 
-export const projects: Projects[] = [
+export const projects: IProjects[] = [
   {
     title: "Covid19 SafeZone",
-    description: "",
-    imageUrl: "",
-    tags: ["Mobile", "React-Native", "Javascript", "Firebase"],
+    description: "Application shows the location of people who have been vaccinated.",
+    imageUrl: "howto.png",
+    tag: "Mobile",
+    technologies: ["React-Native", "JS", "Firebase"],
+    githubLink: "https://github.com/aomsk/Covid-Safe-ZoneApp",
+    previewLink: "",
   },
   {
     title: "Ha Ha How To",
-    description: "",
-    imageUrl: "",
-    tags: ["Full-Stack", "React", "Javascript", "AWS Services"],
+    description: "A web application collects ways to do things.",
+    imageUrl: "howto.png",
+    tag: "Full-Stack",
+    technologies: ["React", "JS", "AWS", "Express"],
+    githubLink: "https://github.com/aomsk/Ha-Ha-How-To",
+    previewLink: "",
   },
   {
     title: "Kaew - Ta",
-    description: "",
-    imageUrl: "",
-    tags: ["Mobile", "React-Native", "Javascript", "ML"],
+    description: "Objects Detection application for visually impaired.",
+    imageUrl: "howto.png",
+    tag: "Mobile",
+    technologies: ["React-Native", "JS", "ML"],
+    githubLink: "https://github.com/aomsk/Object-Detection-App",
+    previewLink: "",
+  },
+  {
+    title: "Tip Calculator",
+    description: "Calculate the correct tip and total cost of the bill per person",
+    imageUrl: "tip-calculator-app-creenshot.png",
+    tag: "Front-end",
+    technologies: ["React", "TS", "Tailwind"],
+    githubLink: "https://github.com/aomsk/tip-calculator-app",
+    previewLink: "https://tip-calculator-app-aomsk.vercel.app/",
+  },
+  {
+    title: "Todo List",
+    description: "Todo Lists help you manage tasks. more easily",
+    imageUrl: "todoList.png",
+    tag: "Full-Stack",
+    technologies: ["React", "TS", "Tailwind", "Express"],
+    githubLink: "https://github.com/aomsk/todolist-fullStack",
+    previewLink: "",
+  },
+  {
+    title: "Shopping Store",
+    description: "Shopping-Store",
+    imageUrl: "shopping-store.png",
+    tag: "Front-end",
+    technologies: ["React", "TS", "Tailwind", "Fetch API"],
+    githubLink: "https://github.com/aomsk/shopping-store",
+    previewLink: "https://shopping-store-aomsk.netlify.app/",
   },
 ];

@@ -22,10 +22,10 @@ function Navbar() {
                   className="transition-all text-[0.9rem] hover:font-bold hover:text-[1rem] cursor-pointer"
                   activeClass="font-bold md:py-2 md:px-3 md:rounded-full md:bg-slate-200"
                   smooth={true}
-                  // duration={150}
+                  duration={180}
                   spy={true}
                   to={link.link}
-                  offset={-1}
+                  // offset={-1}
                 >
                   {link.title}
                 </Link>

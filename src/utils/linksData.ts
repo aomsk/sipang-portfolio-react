@@ -1,4 +1,6 @@
-export const links = [
+import { ILinks } from "./typeHelper";
+
+export const links: ILinks[] = [
   {
     title: "Home",
     link: "home",
@@ -16,21 +18,3 @@ export const links = [
     link: "contact",
   },
 ];
-// export const links = [
-//   {
-//     title: "Home",
-//     link: "#",
-//   },
-//   {
-//     title: "Profile",
-//     link: "#profile",
-//   },
-//   {
-//     title: "My Projects",
-//     link: "#projects",
-//   },
-//   {
-//     title: "Contact",
-//     link: "#contact",
-//   },
-// ];
