@@ -1,6 +1,7 @@
 export interface ILinks {
   title: string;
   link: string;
+  offset: number;
 }
 
 export interface ISkills {
