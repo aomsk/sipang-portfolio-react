@@ -68,9 +68,9 @@ function Hero() {
           <Link
             to={"profile"}
             smooth={true}
-            duration={180}
+            // duration={180}
             spy={true}
-            // offset={-1}
+            offset={5}
             className="cursor-pointer"
           >
             <IoIosArrowDown className="w-[20px] h-[20px]" />
