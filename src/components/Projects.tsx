@@ -9,7 +9,7 @@ interface ProjectsProps {
 }
 function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [projectPerPage] = useState<number>(3);
+  const [projectPerPage] = useState<number>(6);
 
   // Get current cards
   const indexOfLastProject = currentPage * projectPerPage;
@@ -36,7 +36,7 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
           </span>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {selectBadge === "All"
           ? currentProject.map((project, index) => {
               return <CardProject key={index} {...project} />;

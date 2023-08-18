@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 type PaginatinProps = {
   projectPerPage: number;
   totalProjects: number;
@@ -15,13 +17,17 @@ function Pagination({ projectPerPage, totalProjects, currentPage, paginate }: Pa
   return (
     <div className="join mt-5">
       {pageNumber.map((number) => (
-        <button
+        <Link
+          to={"projects"}
+          smooth={true}
+          spy={true}
+          offset={10}
           onClick={() => paginate(number)}
           key={number}
           className={`join-item btn ${number === currentPage ? "btn-active" : ""}`}
         >
           {number}
-        </button>
+        </Link>
       ))}
     </div>
   );
