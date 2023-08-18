@@ -2,8 +2,13 @@
 import { IoSchoolSharp } from "react-icons/io5";
 import { PiCertificateFill } from "react-icons/pi";
 import { FaLightbulb } from "react-icons/fa";
+
 // data
 import { skills_lang, skills_frame, skills_tools } from "../utils/skillsData";
+import { certificates } from "../utils/data";
+
+// Component
+import BadgeSkill from "./BadgeSkill";
 
 // import { useRef } from "react";
 // import { motion, useScroll, useTransform } from "framer-motion";
@@ -39,18 +44,7 @@ function Profile() {
             <div className="flex justify-center flex-wrap p-5">
               {skills_lang.map((skill, index) => {
                 const htmlText = skill.icon;
-                return (
-                  <div
-                    className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
-                    key={index}
-                  >
-                    <div
-                      className="w-[20px] h-[20px]"
-                      dangerouslySetInnerHTML={{ __html: htmlText }}
-                    ></div>
-                    <span className="pl-[.2rem] text-[.88rem]">{skill.name}</span>
-                  </div>
-                );
+                return <BadgeSkill key={index} name={skill.name} htmlText={htmlText} />;
               })}
             </div>
           </div>
@@ -59,18 +53,7 @@ function Profile() {
             <div className="flex justify-center flex-wrap p-5">
               {skills_frame.map((skill, index) => {
                 const htmlText = skill.icon;
-                return (
-                  <div
-                    className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
-                    key={index}
-                  >
-                    <div
-                      className="w-[20px] h-[20px]"
-                      dangerouslySetInnerHTML={{ __html: htmlText }}
-                    ></div>
-                    <span className="pl-[.2rem] text-[.88rem]">{skill.name}</span>
-                  </div>
-                );
+                return <BadgeSkill key={index} name={skill.name} htmlText={htmlText} />;
               })}
             </div>
           </div>
@@ -79,18 +62,7 @@ function Profile() {
             <div className="flex justify-center flex-wrap p-5">
               {skills_tools.map((skill, index) => {
                 const htmlText = skill.icon;
-                return (
-                  <div
-                    className="flex items-center rounded-xl transition-all duration-300 ease-out bg-slate-100 p-[.3rem] w-fit hover:bg-slate-300 m-1"
-                    key={index}
-                  >
-                    <div
-                      className="w-[20px] h-[20px]"
-                      dangerouslySetInnerHTML={{ __html: htmlText }}
-                    ></div>
-                    <span className="pl-[.2rem] text-[.88rem]">{skill.name}</span>
-                  </div>
-                );
+                return <BadgeSkill key={index} name={skill.name} htmlText={htmlText} />;
               })}
             </div>
           </div>
@@ -99,8 +71,16 @@ function Profile() {
       <div className="flex flex-col justify-center items-center text-center py-10">
         <PiCertificateFill className="w-[30px] h-[30px]" />
         <h2 className="text-lg font-semibold mb-5">Certificate</h2>
-        <h1>React Real-World Projects (Udemy)</h1>
-        <h1>TypeScript from Basic to Advanced (Udemy)</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-5">
+          {certificates.map((certificate, index) => (
+            <div key={index} className="card bg-base-100 shadow-xl w-auto">
+              <div className="card-body text-center">
+                <h2 className="font-bold text-[16px]">{certificate.cerName}</h2>
+                <p>{certificate.cerDescription}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
