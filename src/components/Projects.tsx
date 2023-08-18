@@ -1,11 +1,23 @@
 import { projects } from "../utils/projectsData";
 import CardProject from "./CardProject";
+import { useState } from "react";
+import Pagination from "./Pagination";
 interface ProjectsProps {
   tags: string[];
   selectBadge: string;
   setSelectBadge: (selectBadge: string) => void;
 }
 function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [projectPerPage] = useState<number>(6);
+
+  // Get current cards
+  const indexOfLastProject = currentPage * projectPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectPerPage;
+  const currentProject = projects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Change page
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   return (
     <section id="projects" className="flex flex-col items-center h-auto pt-[5rem]">
       <h1 className="text-2xl font-bold py-5">My Projects</h1>
@@ -14,8 +26,8 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
           <span
             className={
               selectBadge === tag
-                ? "badge m-1 cursor-pointer badge-accent text-white py-3"
-                : "badge m-1 cursor-pointer badge-ghost"
+                ? "badge m-1 cursor-pointer badge-accent text-white py-3 shadow-md"
+                : "badge m-1 cursor-pointer badge-ghost shadow-md"
             }
             key={index}
             onClick={() => setSelectBadge(tag)}
@@ -24,9 +36,9 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
           </span>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
         {selectBadge === "All"
-          ? projects.map((project, index) => {
+          ? currentProject.map((project, index) => {
               return <CardProject key={index} {...project} />;
             })
           : projects
@@ -35,12 +47,14 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
                 return <CardProject key={index} {...project} />;
               })}
       </div>
-      <div className="join mt-5">
-        <button className="join-item btn">1</button>
-        <button className="join-item btn btn-active">2</button>
-        <button className="join-item btn">3</button>
-        <button className="join-item btn">4</button>
-      </div>
+      {selectBadge === "All" && (
+        <Pagination
+          projectPerPage={projectPerPage}
+          totalProjects={projects.length}
+          currentPage={currentPage}
+          paginate={paginate}
+        />
+      )}
     </section>
   );
 }
