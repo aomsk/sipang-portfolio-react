@@ -18,3 +18,8 @@ export interface IProjects {
   githubLink: string;
   previewLink: string;
 }
+
+export interface ICertificate {
+  cerName: string;
+  cerDescription: string;
+}

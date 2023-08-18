@@ -1,5 +1,5 @@
 // data
-import { links } from "../utils/linksData";
+import { links } from "../utils/data";
 import { motion } from "framer-motion";
 // import { useActiveSectionTitle } from "../context/activeSectionNavbar";
 import { Link } from "react-scroll";

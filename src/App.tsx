@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 // tags
-import { tags } from "./utils/tags";
+import { tags } from "./utils/data";
 
 function App() {
   const [selectBadge, setSelectBadge] = useState<string>("All");
