@@ -26,8 +26,8 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
           <span
             className={
               selectBadge === tag
-                ? "badge m-1 cursor-pointer badge-accent text-white py-3 shadow-md"
-                : "badge m-1 cursor-pointer badge-ghost shadow-md"
+                ? "badge m-1 cursor-pointer badge-accent text-white py-3"
+                : "badge m-1 cursor-pointer badge-ghost"
             }
             key={index}
             onClick={() => setSelectBadge(tag)}

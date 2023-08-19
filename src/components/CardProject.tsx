@@ -12,7 +12,7 @@ function CardProject({
   previewLink,
 }: IProjects) {
   return (
-    <div className="card w-auto md:w-[22rem] lg:w-[22rem] bg-base-100 shadow-xl mx-5 md:mx-0">
+    <div className="card w-auto md:w-[22rem] lg:w-[22rem] bg-base-100 shadow-lg mx-5 md:mx-0">
       <figure>
         <img src={`/static/images/${imageUrl}`} alt={imageUrl} />
       </figure>
