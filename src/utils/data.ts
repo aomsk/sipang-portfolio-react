@@ -24,7 +24,7 @@ export const links: ILinks[] = [
   // },
 ];
 
-export const tags: string[] = ["All", "FullStack", "Backend", "Frontend", "Mobile"];
+export const tags: string[] = ["All", "FullStack", "Frontend", "Mobile"];
 
 export const certificates: ICertificate[] = [
   {
