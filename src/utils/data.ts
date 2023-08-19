@@ -17,11 +17,11 @@ export const links: ILinks[] = [
     link: "projects",
     offset: 10,
   },
-  {
-    title: "Contact",
-    link: "contact",
-    offset: 20,
-  },
+  // {
+  //   title: "Contact",
+  //   link: "contact",
+  //   offset: 20,
+  // },
 ];
 
 export const tags: string[] = ["All", "FullStack", "Backend", "Frontend", "Mobile"];
