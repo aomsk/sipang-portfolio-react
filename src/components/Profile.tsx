@@ -73,7 +73,7 @@ function Profile() {
         <h2 className="text-lg font-semibold mb-5">Certificate</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-5">
           {certificates.map((certificate, index) => (
-            <div key={index} className="card bg-base-100 shadow-xl w-auto">
+            <div key={index} className="card bg-base-100 shadow-lg w-auto">
               <div className="card-body text-center">
                 <h2 className="font-bold text-[16px]">{certificate.cerName}</h2>
                 <p>{certificate.cerDescription}</p>

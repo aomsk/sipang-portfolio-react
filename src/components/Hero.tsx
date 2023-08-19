@@ -1,4 +1,5 @@
 import { FaInstagram, FaGithub, FaFacebook } from "react-icons/fa";
+import { TbMailFilled } from "react-icons/tb";
 import { AiFillHeart } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { runFireWorks } from "../utils/conffeti";
@@ -61,6 +62,9 @@ function Hero() {
             </a>
             <a href="https://www.facebook.com/AOMJSK/" target="_blank">
               <FaFacebook className="w-[20px] h-[20px] ml-2" />
+            </a>
+            <a onClick={() => window.open("mailto:sipangdev@gmail.com")}>
+              <TbMailFilled className="w-[22px] h-[22px] ml-2 cursor-pointer mt-[-1px]" />
             </a>
           </div>
         </div>

@@ -15,7 +15,7 @@ function Pagination({ projectPerPage, totalProjects, currentPage, paginate }: Pa
   }
 
   return (
-    <div className="join mt-5">
+    <div className="join my-5">
       {pageNumber.map((number) => (
         <Link
           to={"projects"}
