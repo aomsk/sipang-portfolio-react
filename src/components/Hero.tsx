@@ -27,11 +27,7 @@ function Hero() {
         <span className="absolute">
           <AiFillHeart className="heart1 relative top-[6rem] left-6 text-red-500 text-2xl rotate-[-25deg]" />
         </span>
-        <img
-          src="../static/images/avatar2.jpg"
-          alt="avatar"
-          className="w-[200px] h-[200px] rounded-full shadow-lg"
-        />
+        <img src="../static/images/avatar2.jpg" alt="avatar" className="w-[200px] h-[200px] rounded-full shadow-lg" />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -46,7 +42,7 @@ function Hero() {
             <h1 className="text-2xl font-bold">Hello I'm Sipang!</h1>
             <h4 className="mb-5">I want to be a Web Developer</h4>
             <a
-              href=""
+              href="../../static/Sipang K. Resume  Full-Stack Developer.pdf"
               download
               className="bg-black text-white px-3 py-2 rounded-full gap-2 transition-all hover:text-[18px] cursor-pointer shadow-lg"
             >
