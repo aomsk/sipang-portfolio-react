@@ -47,9 +47,8 @@ function Profile() {
       >
         <h1 className="text-lg font-semibold mb-5">About Me</h1>
         <p className="text-justify">
-          Hello, my name is Sipang, but you can call me Aom. I'm a recent graduate and I want to be
-          a web developer, capable of both Frontend and Backend. Right now, I'm practicing and
-          studying various technologies to improve my skills.
+          Hello, my name is Sipang, but you can call me Aom. I'm a recent graduate and I want to be a web developer, capable of both
+          Frontend and Backend. Right now, I'm practicing and studying various technologies to improve my skills.
         </p>
       </motion.div>
 

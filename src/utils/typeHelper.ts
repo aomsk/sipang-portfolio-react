@@ -22,4 +22,5 @@ export interface IProjects {
 export interface ICertificate {
   cerName: string;
   cerDescription: string;
+  image: string;
 }
