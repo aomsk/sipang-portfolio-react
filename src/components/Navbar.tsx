@@ -17,7 +17,7 @@ function Navbar() {
               <li key={index} className="px-2 md:px-4 xl:px-4">
                 <Link
                   className="transition-all text-[0.9rem] hover:font-bold hover:text-[1rem] cursor-pointer"
-                  activeClass="font-bold md:py-2 md:px-3 md:rounded-full md:bg-slate-200 dark:bg-slate-700 dark:text-slate-200"
+                  activeClass="font-bold md:py-2 md:px-3 md:rounded-full md:bg-slate-200 dark:md:bg-slate-700 dark:text-slate-200"
                   smooth={true}
                   // duration={180}
                   spy={true}
