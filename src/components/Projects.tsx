@@ -19,15 +19,13 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   return (
-    <section id="projects" className="flex flex-col items-center h-auto pt-[5rem]">
+    <section id="projects" className="flex flex-col items-center h-auto pt-[5rem] dark:bg-slate-900 dark:text-slate-200">
       <h1 className="text-2xl font-bold py-5">My Projects</h1>
       <div className="flex flex-wrap justify-center items-center w-full xl:w-[30rem]">
         {tags.map((tag, index) => (
           <span
             className={
-              selectBadge === tag
-                ? "badge m-1 cursor-pointer badge-accent text-white py-3"
-                : "badge m-1 cursor-pointer badge-ghost"
+              selectBadge === tag ? "badge m-1 cursor-pointer badge-accent text-white py-3" : "badge m-1 cursor-pointer badge-ghost"
             }
             key={index}
             onClick={() => setSelectBadge(tag)}
@@ -48,12 +46,7 @@ function Projects({ tags, selectBadge, setSelectBadge }: ProjectsProps) {
               })}
       </div>
       {selectBadge === "All" && (
-        <Pagination
-          projectPerPage={projectPerPage}
-          totalProjects={projects.length}
-          currentPage={currentPage}
-          paginate={paginate}
-        />
+        <Pagination projectPerPage={projectPerPage} totalProjects={projects.length} currentPage={currentPage} paginate={paginate} />
       )}
     </section>
   );

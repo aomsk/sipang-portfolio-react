@@ -6,8 +6,11 @@ import { runFireWorks } from "../utils/conffeti";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { useTheme } from "../hooks/useTheme";
 
 function Hero() {
+  const { theme } = useTheme();
+
   useEffect(() => {
     setTimeout(() => {
       runFireWorks();
@@ -15,7 +18,10 @@ function Hero() {
   }, []);
 
   return (
-    <section id="home" className="flex flex-col items-center justify-center h-full">
+    <section
+      id="home"
+      className={`hero-bg-${theme} flex flex-col items-center justify-center h-full dark:bg-slate-900 dark:text-slate-200`}
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -44,7 +50,7 @@ function Hero() {
             <a
               href="../../static/Sipang K. Resume  Full-Stack Developer.pdf"
               download
-              className="bg-black text-white px-3 py-2 rounded-full gap-2 transition-all hover:text-[18px] cursor-pointer shadow-lg"
+              className="bg-black dark:bg-slate-800 text-white text-[15px] px-4 py-2 rounded-full gap-2 transition-all hover:text-[17px] cursor-pointer shadow-lg"
             >
               Download Resume
             </a>

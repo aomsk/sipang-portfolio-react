@@ -4,7 +4,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 function CardProject({ imageUrl, title, description, tag, technologies, githubLink, previewLink }: IProjects) {
   return (
-    <div className="card w-auto md:w-[22rem] lg:w-[22rem] bg-base-100 shadow-lg mx-5 md:mx-0 cursor-pointer">
+    <div className="card w-auto md:w-[22rem] lg:w-[22rem] bg-base-100 shadow-lg mx-5 md:mx-0 cursor-pointer dark:bg-slate-800 dark:text-slate-200">
       <figure>
         <img
           src={`/static/images/${imageUrl}`}

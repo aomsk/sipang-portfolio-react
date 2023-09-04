@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "../src/styles/index.css";
-import { ActiveNavbarProvider } from "./context/activeSectionNavbar.tsx";
+import { ThemeProvider } from "./contexts/themeContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ActiveNavbarProvider>
+    <ThemeProvider>
       <App />
-    </ActiveNavbarProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

@@ -35,7 +35,7 @@ function Profile() {
   }, [control, inView]);
 
   return (
-    <section id="profile" className="flex flex-col items-center h-auto pt-[5rem]">
+    <section id="profile" className="flex flex-col items-center h-auto pt-[5rem] dark:bg-slate-900 dark:text-slate-200">
       <h1 className="text-2xl font-bold py-5">Profile</h1>
       <motion.div
         ref={ref}
@@ -106,7 +106,7 @@ function Profile() {
         <h2 className="text-lg font-semibold mb-5">Certificate</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-5">
           {certificates.map((certificate, index) => (
-            <div key={index} className="card bg-base-100 shadow-lg w-auto">
+            <div key={index} className="card bg-base-100 shadow-lg w-auto dark:bg-slate-800 dark:text-slate-200">
               <div className="card-body text-center">
                 <h2 className="font-bold text-[16px]">{certificate.cerName}</h2>
                 <p>{certificate.cerDescription}</p>
