@@ -48,7 +48,7 @@ function Hero() {
             <h1 className="text-2xl font-bold">Hello I'm Sipang!</h1>
             <h4 className="mb-5">I want to be a Web Developer</h4>
             <a
-              href="../../static/Sipang K. Resume  Full-Stack Developer.pdf"
+              href="../../static/Full-Stack Developer.pdf"
               download
               className="bg-black dark:bg-slate-800 text-white text-[15px] px-4 py-2 rounded-full gap-2 transition-all hover:text-[17px] cursor-pointer shadow-lg"
             >
