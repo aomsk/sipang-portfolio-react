@@ -2,19 +2,15 @@ import { IProjects } from "../utils/typeHelper";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
-function CardProject({
-  imageUrl,
-  title,
-  description,
-  tag,
-  technologies,
-  githubLink,
-  previewLink,
-}: IProjects) {
+function CardProject({ imageUrl, title, description, tag, technologies, githubLink, previewLink }: IProjects) {
   return (
-    <div className="card w-auto md:w-[22rem] lg:w-[22rem] bg-base-100 shadow-lg mx-5 md:mx-0">
+    <div className="card w-auto md:w-[22rem] lg:w-[22rem] bg-base-100 shadow-lg mx-5 md:mx-0 cursor-pointer dark:bg-slate-800 dark:text-slate-200">
       <figure>
-        <img src={`/static/images/${imageUrl}`} alt={imageUrl} />
+        <img
+          src={`/static/images/${imageUrl}`}
+          alt={imageUrl}
+          className="transition-all duration-200 ease-in-out relative hover:scale-[1.2]"
+        />
       </figure>
       <div className="card-body px-4">
         <h2 className="card-title text-[16px] md:text-[18px]">

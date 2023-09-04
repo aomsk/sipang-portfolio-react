@@ -4,7 +4,7 @@ import { TbMailFilled } from "react-icons/tb";
 function Footer() {
   return (
     // <footer>Hi i'm from Footer!!!</footer>
-    <footer className="footer p-10 bg-neutral text-neutral-content w-auto flex justify-between lg:px-60">
+    <footer className="footer p-10 bg-neutral dark:bg-slate-800 dark:text-slate-200 text-neutral-content w-auto flex justify-between lg:px-60">
       <div>
         <svg
           width="50"

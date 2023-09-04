@@ -30,9 +30,11 @@ export const certificates: ICertificate[] = [
   {
     cerName: "React Real-World Projects",
     cerDescription: "Kong Ruksiam (Udemy)",
+    image: "../../static/images/cer react.jpg",
   },
   {
     cerName: "TypeScript from Basic to Advanced",
     cerDescription: "Kong Ruksiam (Udemy)",
+    image: "../../static/images/cer typescript.jpg",
   },
 ];
