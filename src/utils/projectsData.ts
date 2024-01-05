@@ -53,7 +53,7 @@ export const projects: IProjects[] = [
     tag: "Frontend",
     technologies: ["React", "TS", "Tailwind", "API"],
     githubLink: "https://github.com/aomsk/shopping-store",
-    previewLink: "https://shopping-store-aomsk.netlify.app/",
+    previewLink: "https://shopping-store-silk.vercel.app/",
   },
   {
     title: "Advice Generator",
